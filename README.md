@@ -1,6 +1,5 @@
 # tjq
-Tiny JSON Query for Dart 
-(Just a Study, not for production)
+Tiny JSON Query for Dart (currently an experimental study).
 
 # Use from CLI
 ```
@@ -8,6 +7,18 @@ $ cat test.json | pub run tjq:main <expr>
 ```
 
 **expr** is a subset of `jq` query expression.
+
+- Identity: `.`
+- Object Identifier-Index: `.foo`, `.foo.bar`
+- Array Index: `.[2]`
+- Array/Object Value Iterator `.[]`
+- Comma: `,`
+- Pipe: `|`
+- Parenthesis
+- Array Construction: `[]`
+- Object Construction: `{}`
+- Builtin operators: `+`,`-`,`*`,`/`,`%`,`==`,`!=`
+- Functions: `length`, `select`, `contains`
 
 # Use as Library
 ```dart
